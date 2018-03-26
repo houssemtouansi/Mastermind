@@ -14,25 +14,25 @@ public class InterfaceTextuelle {
 		
 		List <Couleur> liste = new ArrayList<>();
 		for (int i = 0 ; i<4 ; i++) {
-			liste.add(ordinateur.pions.get(i));}
+			liste.add(ordinateur.getPions().get(i));}
 		System.out.println("J'ai choisi ma combinaison , à vous de devenir ! ,\n"
 				+ "les couleur possible sont R,J,B,O,V,N \n" +"|----------------------| \n"
 				+"| .... | . | . | 1/10  | \n"+"|----------------------| \n");		
 		
 		int n=1;
 		while(n<=10) {			
-			for (int j = 0 ; j<4 ; j++) ordinateur.pions.set(j, liste.get(j));
+			for (int j = 0 ; j<4 ; j++) ordinateur.getPions().set(j, liste.get(j));
 			Scanner sc = new Scanner(System.in);
 			rep = sc.nextLine();
 			ordinateur.stringToCouleur(rep);
 			ordinateur.validerReponse();
-			list.add("| "+rep+" | "+ordinateur.nbrPionsJuste+" | "+ordinateur.nbrPionsCouleurJuste+" | "+n+ " /10 |\n");
+			list.add("| "+rep+" | "+ordinateur.getNbrPionsJuste()+" | "+ordinateur.getNbrPionsCouleurJuste()+" | "+n+ " /10 |\n");
 			System.out.println("|----------------------| \n");
 			for (int k =0 ; k<list.size();k++)
 				System.out.println(list.get(k));
 			System.out.println("| .... | . | . | " +(n+1) + " /10 |\n");
 			System.out.println("|----------------------| \n");
-			if(ordinateur.nbrPionsJuste ==4) {
+			if(ordinateur.getNbrPionsJuste() ==4) {
 				System.out.println("bravo ! vous avez gagner en " +n+ " tours");
 				break;
 			}

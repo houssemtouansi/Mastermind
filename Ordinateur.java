@@ -6,10 +6,10 @@ import java.util.Random;
 
 
 public class Ordinateur {
-	public List<Couleur> pions;
-	public List<Couleur> reponseUtilisateur;
-	public int nbrPionsJuste ; 
-	public int nbrPionsCouleurJuste ;
+	private List<Couleur> pions;
+	private List<Couleur> reponseUtilisateur;
+	private int nbrPionsJuste ; 
+	private int nbrPionsCouleurJuste ;
 	
 	
 	public Ordinateur() {
@@ -96,4 +96,61 @@ public class Ordinateur {
 		nbrPionsJuste = 0;
 		nbrPionsCouleurJuste =0;
 	}
+
+	/**
+	 * @return the pions
+	 */
+	public List<Couleur> getPions() {
+		return pions;
+	}
+
+	/**
+	 * @param pions the pions to set
+	 */
+	public void setPions(List<Couleur> pions) {
+		this.pions = pions;
+	}
+
+	/**
+	 * @return the reponseUtilisateur
+	 */
+	public List<Couleur> getReponseUtilisateur() {
+		return reponseUtilisateur;
+	}
+
+	/**
+	 * @param reponseUtilisateur the reponseUtilisateur to set
+	 */
+	public void setReponseUtilisateur(List<Couleur> reponseUtilisateur) {
+		this.reponseUtilisateur = reponseUtilisateur;
+	}
+
+	/**
+	 * @return the nbrPionsJuste
+	 */
+	public int getNbrPionsJuste() {
+		return nbrPionsJuste;
+	}
+
+	/**
+	 * @param nbrPionsJuste the nbrPionsJuste to set
+	 */
+	public void setNbrPionsJuste(int nbrPionsJuste) {
+		this.nbrPionsJuste = nbrPionsJuste;
+	}
+
+	/**
+	 * @return the nbrPionsCouleurJuste
+	 */
+	public int getNbrPionsCouleurJuste() {
+		return nbrPionsCouleurJuste;
+	}
+
+	/**
+	 * @param nbrPionsCouleurJuste the nbrPionsCouleurJuste to set
+	 */
+	public void setNbrPionsCouleurJuste(int nbrPionsCouleurJuste) {
+		this.nbrPionsCouleurJuste = nbrPionsCouleurJuste;
+	}
+	
 }
